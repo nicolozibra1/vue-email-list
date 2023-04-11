@@ -13,10 +13,10 @@
 <body>
 
     <div id="app">
-        <div class="container">
+        <div class="container d-flex flex-column align-items-center py-5">
             <h1>{{title}}</h1>
-            <button @click="getEmailData">Generate Email</button>
-            <ul v-if="emailList.length == 10">
+            <button @click="getEmailData" class="btn btn-success">Generate Email</button>
+            <ul v-if="emailList.length == 10" class="pt-3 list-unstyled text-center d-flex flex-column gap-2">
                 <li v-for="email in emailList">
                     {{email}}
                 </li>
