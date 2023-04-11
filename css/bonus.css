@@ -1,0 +1,44 @@
+:root{
+    --wood: #8C4303;
+    --brown:  #734E39;
+    --yellow: #F2E96B;
+    --orange: #F27405;
+    --black: #485359;
+}
+body{
+    background-image: url(../img/bar-background.jpg);
+    background-size: cover;
+}
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+button{
+    background-color: var(--orange);
+    border: 2px solid var(--black);
+    border-radius: 12px;
+    padding: 8px 12px;
+    color: white;
+    font-weight: bolder;
+}
+.card{
+    border-radius: 10px;
+    border: 2px solid var(--orange);
+    background-color: rgba(0, 0, 0, 0.582);
+}
+.card-body{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+h6{
+    color: var(--orange);
+}
+.card-title{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
