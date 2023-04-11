@@ -9,11 +9,21 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            
+            title: 'Vue Email List',
+            emailList: [],
+            basePath: 'https://flynn.boolean.careers/exercises/api/'
         }
     },
     methods: {
-        
+        getEmailData() {
+            this.emailList = [];
+            for(let i = 0; i < 10; i++) {
+                axios.get(this.basePath + 'random/mail').then((res) => {
+                    console.log(res.data.response)
+                    this.emailList.push(res.data.response);
+                    });
+            }     
+        }
     },
     mounted() {
 

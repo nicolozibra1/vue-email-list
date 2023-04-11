@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Scaffolding</title>
+    <title>Vue Email List</title>
 </head>
 <body>
 
     <div id="app">
-        
+        <div class="container">
+            <h1>{{title}}</h1>
+            <button @click="getEmailData">Generate Email</button>
+            <ul v-if="emailList.length == 10">
+                <li v-for="email in emailList">
+                    {{email}}
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
